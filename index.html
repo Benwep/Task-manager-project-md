@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="public/css/style.css">
+    </head>
+    
+    <body>
+        <div class="container">
+            <div id="TaskContainer">
+                <font id="Task0" class="TaskText" style="display:none;"> <input type="checkbox" id="Checkmark0"  onclick="TickBox(this.id)" style="width:2vw;height:2vw;">Drink a cup of tea</font> <font class="DeleteTask" id="0" onclick="DeleteTask(this.id)">Delete?</font> </input>
+
+                <font id="Task1" class="TaskText"> <input type="checkbox" id="Checkmark1"  onclick="TickBox(this.id)" style="width:2vw;height:2vw;">Drink a cup of tea</font> <font class="DeleteTask" id="1" onclick="DeleteTask(this.id)">Delete?</font>    
+            </div>
+
+           <button class="NewTaskBtn" id="NewTaskBtn"> <font class="BtnText" id="TaskBtnText"> Create new</font> </button>
+            
+            <div id="InputPanel" style="width:100%;display:flex;justify-content:flex-end;opacity:0;">
+               <input style="flex-basis:90%;height:30px;" id="InputBar">
+               <img src="public/images/confirm.png" class="ConfirmBtn" onclick="CreateNew()">
+            </div>
+
+        </div>
+    </body>
+</html>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="public/js/script.js"></script>
