@@ -1,5 +1,3 @@
-window.saveArray = new Array(); //store tasks
-
 $('#NewTaskBtn').on("mouseenter", () => {
     console.log("Hover!");
     $('#TaskBtnText').addClass("Active");
@@ -69,23 +67,5 @@ function CreateNew(){
         document.getElementById("InputPanel").style.opacity = 0;
 
         //var clone = document.getElementByID("someElement").cloneNode(true);
-        saveArray.push(elem.outerHTML);
-    }
-}
-
-
-
-
-
-function save(){
-    localStorage["elements"] = JSON.stringify(saveArray);
-}
-function load(){
-    var tempsave = JSON.parse(localStorage["elements"]);
-
-    for (var i = 0; i < tempsave.length; i++){      
-        var element = document.createElement('div');
-        document.getElementById('element-container').appendChild(element); 
-        element.outerHTML = tempsave[i];    
     }
 }
