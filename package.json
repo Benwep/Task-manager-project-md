@@ -45,9 +45,8 @@
     "browser",
     "library"
   ],
-
   "dependencies": {
+    "jquery": "^3.7.0",
     "node": "^20.5.0"
   }
-  
 }
