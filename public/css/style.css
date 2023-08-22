@@ -1,24 +1,48 @@
 body{
-    background-color: #ff6600;
     display:flex;
 
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }   
 body::-webkit-scrollbar {
     display: none;
   }
 
+.BgImage{
+    background-image:url("https://i.ytimg.com/vi/24szFfc6YYE/maxresdefault.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
 
+    z-index:0;
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+    height:100%;
+
+}
 .container{
-    width:33%;
-    height:500vh;
-    background-color: rgba(0,0,0,0);
+    margin-top:1%;
+
+    width:50%;
+    height:fit-content;
+    min-height: 110px;
+
+    background-image: radial-gradient(circle at top left,#fe7be5d9 30%,#974EC3 70%) ;
 
     display:flex;
-    align-items: center;
+    align-items: flex-start;
 
     flex-direction:column;
     flex-wrap:wrap;
+
+    border-radius:50px;
+    border:solid 3px;
+    border-image: linear-gradient(bottom right,#313866 30%,#313866 70%) ;
+
+    z-index:1;
 }
 
 .NewTaskBtn{
@@ -88,13 +112,19 @@ body::-webkit-scrollbar {
     color:#e6ffff;
     font-size: 3vw;
     font-family: cursive;
+
+    margin-bottom:3%;
+    margin-left:3%;
+
+    white-space: pre-wrap;
 }
 .DeleteTask{
     align-self:flex-end;
+    margin-left:4%;
     display:none;
 
     font-size: 3vw;
-    color:red;
+    color:#504099;
     font-family:Gill Sans;
 }
 .DeleteTask:hover{
@@ -102,12 +132,38 @@ body::-webkit-scrollbar {
 }
 
 .ConfirmBtn{
-    width:2.5vw;
-    height:2.5vw; 
+    width:3.5vw;
+    height:3.5vw; 
 
     margin:1%;
     margin-top:0%;
 }
 .ConfirmBtn:hover{
     cursor:pointer;
+}
+
+.InputPanel{
+    margin-top:4%;
+
+    width:100%;
+    height:60px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:1;
+
+    z-index:2;
+}
+
+.InputBar{
+    height:50px;
+    width:80%;
+
+    border-radius:50px;
+    border-color: rgb(207, 57, 237);
+
+    font-size:2.5vw;
+    color:#504099;
+    
 }

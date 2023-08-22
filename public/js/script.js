@@ -1,16 +1,3 @@
-$('#NewTaskBtn').on("mouseenter", () => {
-    console.log("Hover!");
-    $('#TaskBtnText').addClass("Active");
-})
-
-$('#NewTaskBtn').on("click", () => {
-    $("#NewTaskBtn").css("border-color", "#e6ffff");
-
-    $("#InputPanel").css("opacity",1);
-
-    setTimeout(() => $("#NewTaskBtn").css("border-color", "#036d6d"), 200);
-});
-
 function DeleteTask(ThisID){
     let ID = "Task" + ThisID;
 
@@ -36,10 +23,6 @@ function TickBox(ThisID){
     }
 }
 
-$('#NewTaskBtn').on("mouseleave", () => {
-    $('#TaskBtnText').removeClass("Active");
-})
-
 function CreateNew(){
     if (document.getElementById("InputBar").value != ""){
         let elem = document.getElementById("TaskContainer");
@@ -63,8 +46,6 @@ function CreateNew(){
         delBtn.appendTo(document.getElementById("TaskContainer"));
 
         document.getElementById(newID).childNodes[2].nodeValue = document.getElementById("InputBar").value;
-
-        document.getElementById("InputPanel").style.opacity = 0;
 
         //var clone = document.getElementByID("someElement").cloneNode(true);
     }
