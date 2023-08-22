@@ -116,16 +116,40 @@ body::-webkit-scrollbar {
     margin-bottom:3%;
     margin-left:3%;
 
+    display:flex;
+    align-items: center;
+
     white-space: pre-wrap;
+    position:relative;
 }
 .DeleteTask{
     align-self:flex-end;
-    margin-left:4%;
     display:none;
+    position:relative;
+
+    width:40px;
+    height:40px;
 
     font-size: 3vw;
     color:#504099;
     font-family:Gill Sans;
+
+    margin-left:1%;
+}
+@media screen and (width <= 800px){
+    .DeleteTask{
+        transform:translateY(-5px);
+    }
+}
+@media screen and (width <= 1200px){
+    .DeleteTask{
+        transform:translateY(-20px);
+    }
+}
+@media screen and (width >= 1200px){
+    .DeleteTask{
+        transform:translateY(-50px);
+    }
 }
 .DeleteTask:hover{
     cursor:pointer;

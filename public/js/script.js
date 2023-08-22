@@ -27,7 +27,7 @@ function CreateNew(){
     if (document.getElementById("InputBar").value != ""){
         let elem = document.getElementById("TaskContainer");
         let ID = elem.lastElementChild.id.match(/-?\d+\.?\d*/);// Last number of each children id
-        let newID = parseInt(elem.lastElementChild.id) + 1;
+        let newID = parseInt(ID) + 1;
     
         newID = "Task" + newID;
     
@@ -35,15 +35,15 @@ function CreateNew(){
         elem.attr("id",newID);
         elem.appendTo(document.getElementById("TaskContainer"));
     
-        elem.css("display", "block");
+        elem.css("display", "flex");
 
         let NewChildID = parseInt(ID) + 1;
         elem.find("#Checkmark0").attr("id","Checkmark" + NewChildID);
 
         NewChildID = parseInt(ID) + 1;
-        delBtn = $("#0").clone(true);//new delete button
+
+        delBtn = elem.find("#0");//new delete button
         delBtn.attr("id",NewChildID);
-        delBtn.appendTo(document.getElementById("TaskContainer"));
 
         document.getElementById(newID).childNodes[2].nodeValue = document.getElementById("InputBar").value;
 
